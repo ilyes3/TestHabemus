@@ -1,19 +1,7 @@
-# _Sample project_
-
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
-
-
-
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
-
-## Example folder contents
-
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+# _Esp32 Audio Streaming_
+The project contains the code to stream audio .
+## Project
+The project **Esp32 Audio Streaming** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
 
 ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
 files that provide set of directives and instructions describing the project's source files and targets
@@ -22,11 +10,28 @@ files that provide set of directives and instructions describing the project's s
 Below is short explanation of remaining files in the project folder.
 
 ```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
+TestHabemus
+├─ CMakeLists.txt
+├─ .devcontainer
+├─ .vscode
+├─ README.md
+└─ main
+   ├─ CMakeLists.txt
+   └─ main.c               
 ```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+The project was created based on the template provided by the EspressIf Toolchain by running the command 'idf.py create-project'.
+## Hardware
+* A development board with ESP32-­WROVER-­E
+* A USB cable for Power supply and programming
+## Development Environment
+
+To configure the laptop with the required development environment, it is recommended to use VS Code and the Espressif IDF extension. 
+
+Setting up the workspace in VS Code for the current project, requires only the following steps:
+
+* Install the Espressif IDF Extension in VS Code **Espressif IDF**
+* Clone the repository `https://github.com/ilyes3/TestHabemus.git`
+* Open the repository folder in VS Code
+* Launch **ESP-IDF: Add vscode configuration folder** (from Command Palette "ctrl+shift+p")
+
+ the following [ESP-IDF Getting Started Guide](https://idf.espressif.com/) explains how to configure, build and flash the project by using directly the `idf.py` commands.
